@@ -1,0 +1,28 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "NavBar": {
+    "login": "Log In",
+    "register": "Sign Up",
+    "headerLogin": "Welcome back",
+    "headerRegister": "Create your account",
+    "email": "Email Address",
+    "name": "Full name",
+    "country": "Country",
+    "repeatPassword": "Repeat Password",
+    "password": "Password",
+    "logButton": "Log in",
+    "loginSwitchText": "Don't have an account yet?",
+    "loginAnchor": "Sign up",
+    "registerSwitchText": "Already have an account?",
+    "registerAnchor": "Sign in",
+    "registerButton": "Register",
+    "courses": "Programs",
+    "plans": "Plans",
+    "about": "About",
+    "contact": "Contact",
+    "community": "Community"
+  }
+}

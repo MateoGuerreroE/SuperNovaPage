@@ -1,0 +1,28 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "NavBar": {
+    "login": "Ingresar",
+    "register": "Registro",
+    "headerLogin": "Bienvenido nuevamente",
+    "headerRegister": "Crea tu cuenta",
+    "email": "Correo electrónico",
+    "name": "Nombre completo",
+    "country": "País",
+    "repeatPassword": "Repetir contraseña",
+    "password": "Contraseña",
+    "logButton": "Ingresar",
+    "loginSwitchText": "¿No has creado una cuenta aún?",
+    "loginAnchor": "Registrate",
+    "registerSwitchText": "¿Ya tienes una cuenta?",
+    "registerAnchor": "Ingresa",
+    "registerButton": "Crear cuenta",
+    "courses": "Cursos",
+    "plans": "Planes",
+    "about": "Información",
+    "contact": "Contacto",
+    "community": "Comunidad"
+  }
+}
