@@ -1,10 +1,29 @@
-// TODO Create type
-export const menuItems = ["courses", "plans", "about", "community", "contact"];
+import { MenuItemList } from "@/types/types";
 
-// const menuItems = [
-//     {
-//         translateKey: 'courses',
-//         redirect: '#',
-
-//     }
-// ]
+export const menuItems: MenuItemList = [
+  {
+    translateKey: "courses",
+    redirect: "courses",
+    key: "course-page",
+  },
+  {
+    translateKey: "plans",
+    redirect: "plans",
+    key: "plans-page",
+  },
+  {
+    translateKey: "about",
+    redirect: "about",
+    key: "about-page",
+  },
+  {
+    translateKey: "community",
+    redirect: "community",
+    key: "community-page",
+  },
+  {
+    translateKey: "contact",
+    redirect: "contact",
+    key: "contact-page",
+  },
+];

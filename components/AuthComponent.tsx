@@ -31,8 +31,8 @@ export default function AuthComponent() {
           {t("login")}
         </p>
         <Button
-          variant="flat"
-          className="dark"
+          className="dark text-white"
+          color="primary"
           onClick={() => {
             setAuthType("register");
             onOpen();

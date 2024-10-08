@@ -9,3 +9,11 @@ export interface CountryInfo {
 }
 
 export type ValidCountryList = CountryInfo[];
+
+export interface MenuItem {
+  translateKey: string;
+  redirect: string;
+  key: string;
+}
+
+export type MenuItemList = MenuItem[];
