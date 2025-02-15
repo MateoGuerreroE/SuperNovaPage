@@ -3,7 +3,7 @@ import { setUserLocale } from "@/services/locale";
 import { useCallback, useEffect, useState } from "react";
 
 const useUserLocale = (
-  localeValue: Locale = defaultLocale
+  localeValue: Locale = defaultLocale,
 ): [Locale, (value: Locale) => void] => {
   const [locale, setLocale] = useState<Locale>(localeValue);
 

@@ -4,8 +4,16 @@
     "about": "Go to the about page"
   },
   "NavBar": {
+    "courses": "Cursos",
+    "plans": "Planes",
+    "about": "Información",
+    "contact": "Contacto",
+    "community": "Comunidad"
+  },
+  "Auth": {
     "login": "Ingresar",
     "register": "Registro",
+    "loginError": "Credenciales incorrectas",
     "headerLogin": "Bienvenido nuevamente",
     "headerRegister": "Crea tu cuenta",
     "email": "Correo electrónico",
@@ -19,10 +27,13 @@
     "registerSwitchText": "¿Ya tienes una cuenta?",
     "registerAnchor": "Ingresa",
     "registerButton": "Crear cuenta",
-    "courses": "Cursos",
-    "plans": "Planes",
-    "about": "Información",
-    "contact": "Contacto",
-    "community": "Comunidad"
+    "emailValidation": "Por favor ingresa un correo electrónico válido",
+    "textValidation:": "Por favor ingresa un texto válido para este campo",
+    "close": "Cerrar",
+    "successLogin": "Bienvenido nuevamente",
+    "failedLogin": "Credenciales incorrectas",
+    "successRegister": "Te has registrado. Verifica tu correo electrónico",
+    "failedRegister": "No pudimos crear tu cuenta. Intenta nuevamente.",
+    "registerNameHint": "Por ejemplo: Juan Perez"
   }
 }

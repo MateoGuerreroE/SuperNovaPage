@@ -4,6 +4,15 @@
     "about": "Go to the about page"
   },
   "NavBar": {
+    "courses": "Programs",
+    "plans": "Plans",
+    "about": "About",
+    "contact": "Contact",
+    "community": "Community"
+  },
+  "Auth": {
+    "loginError": "Invalid credentials",
+    "logButton": "Log in",
     "login": "Log In",
     "register": "Sign Up",
     "headerLogin": "Welcome back",
@@ -12,17 +21,19 @@
     "name": "Full name",
     "country": "Country",
     "repeatPassword": "Repeat Password",
+    "registerButton": "Sign up",
     "password": "Password",
-    "logButton": "Log in",
     "loginSwitchText": "Don't have an account yet?",
     "loginAnchor": "Sign up",
+    "registerAnchor": "Log in",
     "registerSwitchText": "Already have an account?",
-    "registerAnchor": "Sign in",
-    "registerButton": "Register",
-    "courses": "Programs",
-    "plans": "Plans",
-    "about": "About",
-    "contact": "Contact",
-    "community": "Community"
+    "emailValidation": "Please enter a valid email address",
+    "textValidation": "Please enter a valid text for this field",
+    "close": "Close",
+    "successLogin": "Welcome back",
+    "failedLogin": "Invalid credentials",
+    "successRegister": "Account created successfully, check your email for verification",
+    "failedRegister": "Could not create your account. Please try again.",
+    "registerNameHint": "For example: John Doe"
   }
 }

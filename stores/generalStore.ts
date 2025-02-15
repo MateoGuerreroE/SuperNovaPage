@@ -1,3 +1,4 @@
+import { AuthResponse } from "@/types";
 import { create } from "zustand";
 
 export type AuthOptions = {
@@ -6,12 +7,11 @@ export type AuthOptions = {
 };
 
 export interface GeneralState {
-  authOptions: AuthOptions;
-  setAuthOptions: (value: Partial<AuthOptions>) => void;
+  auth: AuthResponse | null;
+  setAuth: (value: AuthResponse | null) => void;
 }
 
 export const useGeneralStore = create<GeneralState>((set) => ({
-  authOptions: { isVisible: false, type: "login" },
-  setAuthOptions: (value: Partial<AuthOptions>) =>
-    set((state) => ({ authOptions: { ...state.authOptions, ...value } })),
+  auth: null,
+  setAuth: (value: AuthResponse | null) => set({ auth: value }),
 }));

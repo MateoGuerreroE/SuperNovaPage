@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/react";
+import { heroui } from "@heroui/react";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,7 +7,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -27,11 +27,14 @@ const config: Config = {
         mulish: "var(--font-mulish)",
         leagotic: "var(--font-leagotic)",
       },
+      height: {
+        "nav-bar-calc": "calc(100vh - 64px)",
+      },
     },
   },
   darkMode: "class",
   plugins: [
-    nextui({
+    heroui({
       themes: {
         dark: {
           extend: "dark",

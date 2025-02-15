@@ -1,108 +1,103 @@
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
-
+// TODO Have cloudinary domain in env.
 export default function HomeMain() {
   return (
-    <section className="w-full h-[calc(100vh-64px)] relative">
-      <div className="h-full w-full relative overflow-hidden">
-        <Image
-          src="/visuals/11.svg"
-          alt="visual11"
-          width={2000}
-          height={2000}
-          className="max-w-[2500px] rotate-90 absolute -bottom-96 -left-[960px] min-w-[2000px] z-20"
-        />
-        <Image
-          src="/visuals/1.svg"
-          alt="visual1"
-          width={2000}
-          height={2000}
-          className="absolute max-w-[2500px] min-w-[2000px] -top-[500px] -right-[1124px]"
-        />
-        <Image
-          src="/visuals/7.svg"
-          alt="visual1"
-          width={2000}
-          height={2000}
-          className="absolute max-w-[2500px] min-w-[2000px] -top-[0px] -right-[800px] hidden md:block opacity-50"
-        />
-        <Image
-          src="/visuals/2.svg"
-          alt="visual2"
-          width={2000}
-          height={2000}
-          className="absolute rotate-180 max-w-[2500px] min-w-[2000px] -top-[0px] -right-[900px] hidden md:block"
-        />
-        <Image
-          src="/visuals/3.svg"
-          alt="visual3"
-          width={2000}
-          height={2000}
-          className="absolute max-w-[2500px] min-w-[2000px] top-[300px] -right-[800px] hidden md:block -rotate-90 z-10"
-        />
-        <Image
-          src="/visuals/5.svg"
-          alt="visual3"
-          width={2000}
-          height={2000}
-          className="absolute max-w-[2500px] min-w-[2000px] top-[550px] -right-[700px] hidden md:block rotate-90"
-        />
-        <Image
-          src="/visuals/6.svg"
-          alt="visual1"
-          width={2000}
-          height={2000}
-          className="absolute max-w-[2500px] min-w-[2000px] -top-[600px] -right-[700px] hidden xl:block rotate-45"
-        />
-        <Card
-          className="absolute bottom-[150px] right-[200px] 3xl:right-[500px] w-[700px] h-[500px] bg-black/20 p-5 hidden 2xl:block"
-          isBlurred
-        >
-          <CardBody className="text-white font-mulish flex items-center justify-center">
-            Card with info, SS or video
-          </CardBody>
-        </Card>
-        <div className="grid grid-cols-2 grid-rows-2 gap-0 w-[180px] 2xl:w-[300px] absolute left-[200px] bottom-[150px]">
-          <Image
-            src="/visuals/dot-grid.svg"
-            alt="dotgrid"
-            width={500}
-            height={500}
-            className="scale-125"
-          />
-          <Image
-            src="/visuals/dot-grid.svg"
-            alt="dotgrid"
-            width={500}
-            height={500}
-            className="scale-125"
-          />
-          <Image
-            src="/visuals/dot-grid.svg"
-            alt="dotgrid"
-            width={500}
-            height={500}
-            className="scale-125"
-          />
-          <Image
-            src="/visuals/dot-grid.svg"
-            alt="dotgrid"
-            width={500}
-            height={500}
-            className="scale-125"
-          />
+    <section className="w-full h-nav-bar-calc relative overflow-hidden">
+      <Image
+        src="https://res.cloudinary.com/dx8zaoden/image/upload/v1739567798/s5xvcpymp6vjg6aezqop.png"
+        alt="background"
+        width={2560}
+        height={1440}
+        className="w-full h-full absolute top-0 right-0 min-w-[1300px]"
+      />
+
+      <Image
+        src="https://res.cloudinary.com/dx8zaoden/image/upload/v1739569501/i9sjxcjmz55udfkpu8rp.png"
+        alt="logo-helper"
+        width={800}
+        height={800}
+        className="absolute -bottom-72 right-0 rotate-12 opacity-75"
+      />
+
+      <div className="w-full h-full relative flex flex-col lg:flex-row py-6 lg:py-12 px-8 lg:px-16 gap-6">
+        <div className="w-full h-1/2 lg:w-1/2 lg:h-full flex justify-end">
+          <div className="flex flex-col justify-center max-w-[900px]">
+            <h1 className="font-leagotic text-white text-[60px] md:text-[100px] 2xl:text-[120px] leading-[55px] md:leading-[88px] 2xl:leading-[100px]">
+              MAIN TEXT MESSAGE
+              <br /> FOR SUPERNOVA ACADEMY PAGE
+            </h1>
+            <p className="font-mulish text-2xl md:text-3xl text-white leading-tight md:leading-normal">
+              Small message for providing details
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="absolute top-[50px] md:top-[150px] w-full flex flex-col items-center">
-        <div className="w-[70%]">
-          <h1 className="font-leagotic  text-white text-[60px] md:text-[100px] 2xl:text-[120px] w-[100%] md:w-[80%] xl:w-[70%] leading-tight md:leading-[88px] 2xl:leading-[100px]">
-            MAIN TEXT MESSAGE
-            <br /> FOR SUPERNOVA ACADEMY PAGE
-          </h1>
-          <p className="font-mulish text-2xl md:text-3xl text-white leading-normal  w-[100%] md:w-[80%] xl:w-[70%]">
-            Small message for providing details
-          </p>
+        <div className="w-full h-1/2 lg:w-1/2 lg:h-full flex items-center">
+          <div className="w-full h-full p-2 lg:p-6 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5 max-w-[900px] max-h-[850px]">
+            <Card
+              isBlurred
+              className="dark border-none bg-zinc-950/40 p-2 lg:p-5 flex flex-row lg:flex-col"
+              shadow="sm"
+            >
+              <CardHeader className="font-leagotic text-4xl w-32 lg:w-auto">
+                Course 1
+              </CardHeader>
+
+              <CardBody className="font-mulish text-lg">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, beatae! Perferendis expedita iste earum illum minima.
+                </p>
+              </CardBody>
+            </Card>
+            <Card
+              isBlurred
+              className="dark border-none bg-zinc-950/40 p-2 lg:p-5 flex flex-row lg:flex-col"
+              shadow="sm"
+            >
+              <CardHeader className="font-leagotic text-4xl w-32 lg:w-auto">
+                Course 2
+              </CardHeader>
+
+              <CardBody className="font-mulish text-lg">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, beatae! Perferendis expedita iste earum illum minima.
+                </p>
+              </CardBody>
+            </Card>
+            <Card
+              isBlurred
+              className="dark border-none bg-zinc-950/40 p-2 lg:p-5 lg:col-span-2 row-span-2 flex flex-row lg:flex-col"
+              shadow="sm"
+            >
+              <CardHeader className="font-leagotic text-4xl w-32 lg:w-auto">
+                Course 3
+              </CardHeader>
+
+              <CardBody className="font-mulish text-lg">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, beatae! Perferendis expedita iste earum illum minima,
+                  obcaecati sint repellat magnam ipsa? Sunt ullam aut est ut
+                  officia iure veritatis nesciunt?
+                </p>
+              </CardBody>
+            </Card>
+            {/* <Card
+              isBlurred
+              className="dark border-none bg-zinc-950/40 p-2 lg:p-5 flex flex-row lg:flex-col"
+              shadow="sm"
+            >
+              <CardHeader className="font-leagotic text-4xl w-32 lg:w-auto">
+                Course 4
+              </CardHeader>
+
+              <CardBody className="font-mulish text-lg">
+                <p>Brief info about the course</p>
+              </CardBody>
+            </Card> */}
+          </div>
         </div>
       </div>
     </section>

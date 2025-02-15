@@ -17,3 +17,16 @@ export interface MenuItem {
 }
 
 export type MenuItemList = MenuItem[];
+
+export interface LoginRequest {
+  emailAddress: string;
+  password: string;
+}
+
+export interface RegisterRequest {
+  emailAddress: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  country: string;
+}

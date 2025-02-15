@@ -8,7 +8,7 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import LoginForm from "./LoginForm";
@@ -16,8 +16,10 @@ import RegisterForm from "./RegisterForm";
 
 export default function AuthComponent() {
   const [authType, setAuthType] = useState<AuthType>("login");
+
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const t = useTranslations("NavBar");
+  const t = useTranslations("Auth");
+
   return (
     <div>
       <div className="flex flex-row gap-2">
@@ -33,7 +35,7 @@ export default function AuthComponent() {
         <Button
           className="dark text-white"
           color="primary"
-          onClick={() => {
+          onPress={() => {
             setAuthType("register");
             onOpen();
           }}
@@ -44,6 +46,8 @@ export default function AuthComponent() {
       <Modal
         backdrop="blur"
         placement="center"
+        shouldBlockScroll
+        hideCloseButton
         isOpen={isOpen}
         onClose={onClose}
         radius="sm"
@@ -57,14 +61,17 @@ export default function AuthComponent() {
               </ModalHeader>
               <ModalBody>
                 {authType === "login" ? (
-                  <LoginForm changeAuthType={setAuthType} />
+                  <LoginForm
+                    changeAuthType={setAuthType}
+                    closeModal={onClose}
+                  />
                 ) : (
                   <RegisterForm changeAuthType={setAuthType} />
                 )}
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
+                  {t("close")}
                 </Button>
               </ModalFooter>
             </>

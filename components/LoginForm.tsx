@@ -1,31 +1,82 @@
-import { AuthType } from "@/types/types";
-import { Button, Input } from "@nextui-org/react";
+import { AuthType, LoginRequest } from "@/types/types";
 import { useTranslations } from "next-intl";
-import React from "react";
+import { CustomFormData, ExecAction, useForm } from "@/hooks/useForm";
+import { validateEmail } from "@/utils";
+import { useAuthentication } from "@/hooks/useAuthentication";
+import { useGeneralStore } from "@/stores/generalStore";
+import { FormActionResponse } from "@/types";
 
 type ComponentProps = {
   changeAuthType: (val: AuthType) => void;
+  closeModal: () => void;
 };
 
-export default function LoginForm({ changeAuthType }: ComponentProps) {
-  const t = useTranslations("NavBar");
+interface ILoginForm {
+  emailAddress: string;
+  password: string;
+}
+
+export default function LoginForm({
+  changeAuthType,
+  closeModal,
+}: ComponentProps) {
+  const t = useTranslations("Auth");
+  const { loginUser } = useAuthentication();
+  const { auth } = useGeneralStore();
+
+  const LoginFormData: CustomFormData<ILoginForm> = {
+    submitText: t("logButton"),
+    fields: {
+      emailAddress: {
+        inputType: "input",
+        key: "emailAddress",
+        name: t("email"),
+        required: true,
+        validations: [
+          {
+            exec: validateEmail,
+            message: t("emailValidation"),
+          },
+        ],
+      },
+      password: {
+        inputType: "input",
+        key: "password",
+        name: t("password"),
+        required: true,
+        validations: [],
+      },
+    },
+  };
+
+  const loginFormAction = async (
+    params: LoginRequest,
+  ): Promise<FormActionResponse<void>> => {
+    const loginSuccessful = await loginUser(params);
+    if (loginSuccessful) {
+      closeModal();
+      return {
+        isSuccess: true,
+        data: undefined,
+      };
+    } else {
+      return {
+        isSuccess: false,
+        data: undefined,
+      };
+    }
+  };
+
+  const formAction: ExecAction<void> = {
+    trigger: (params: LoginRequest) => loginFormAction(params),
+    successMessage: t("successLogin"),
+    failureMessage: t("failedLogin"),
+  };
+
+  const { FormComponent } = useForm(LoginFormData, formAction);
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col gap-4">
-        <Input
-          type="email"
-          label={t("email")}
-          labelPlacement="inside"
-          radius="sm"
-        ></Input>
-        <Input
-          type="password"
-          label={t("password")}
-          labelPlacement="inside"
-          radius="sm"
-        ></Input>
-        <Button>{t("logButton")}</Button>
-      </div>
+      <FormComponent />
       <div className="text-center text-sm">
         <p className="text-white/60">{t("loginSwitchText")}</p>
         <a

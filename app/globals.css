@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alert-popup {
+  @apply rounded-lg font-mulish shadow-md pb-10;
+}
+
+.alert-container {
+  backdrop-filter: blur(12px);
+  @apply p-8;
+}
+
+.alert-button {
+  @apply bg-[#690DAB] rounded-xl font-mulish w-32;
+}
